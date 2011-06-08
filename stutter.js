@@ -1,4 +1,3 @@
-
 Stutter = function(id) {
 
   var canvas     = document.getElementById(id);
