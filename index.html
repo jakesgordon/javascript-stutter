@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <title>Can anyone smooth this animation?</title>
+  <style>
+    #canvas { width: 400px; height: 300px; }
+  </style>
+</head> 
+ 
+<body> 
+
+  <canvas id="canvas">
+  </canvas>
+
+  <div id="help">
+    <p>
+      This is an example of a canvas animation loop that is about as
+      simple as it can get but still has an annoying stutter.
+    </p>
+    <p>
+      I have some ideas of what the problem <i>might</i> be, but have
+      not been able to pin this down yet.
+      <ul>
+        <li>Incorrect use of requestAnimationFrame?</li>
+        <li>Incorrect calculation of <b>dt</b> time delta?</li>
+        <li>Garbage collection interference?</li>
+        <li>Need to interpolate between 'previous' and 'next' states during render()?</li>
+        <li>Rounding issues of indeterminate intervals - 1000/60 = 16.6666, steps are either 16ms or 17ms?</li>
+        <li>Fundamental limitation of course browser timers?</li>
+        <li>Browser bugs?</li>
+      </ul>
+    </p>
+    <p>
+      If you have any ideas of how to smooth this animation out. Please let me
+      know <a href="mailto:jake@codeincomplete.com">jake@codeincomplete.com</a>
+    </p>
+  </div>
+
+
+  <script src="stutter.js"></script>
+  <script>
+    Stutter('canvas');
+  </script>
+
+</body> 
+</html>
