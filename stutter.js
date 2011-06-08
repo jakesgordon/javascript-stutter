@@ -15,7 +15,6 @@ Stutter = function(id) {
   var timestamp  = function() { return Date.now(); }
 
   var render = function() {
-    ctx.save();
     ctx.fillStyle = color.background;
     ctx.fillRect(0, 0, width, height);
     ctx.fillStyle = color.ball;
