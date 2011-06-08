@@ -45,9 +45,9 @@ Stutter = function(id) {
     update(now - last);
     render();
     last = now;
-    requestAnimationFrame(frame);
+    requestAnimationFrame(frame, canvas);
   };
-  requestAnimationFrame(frame);
+  requestAnimationFrame(frame, canvas);
 
 //=================
 // USE setInterval:
